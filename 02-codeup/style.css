@@ -236,3 +236,77 @@ body {
 .btn-solid:hover {
     background-color: var(--color-primary-dark);
 }
+
+/* ==================== SEÇÃO NEWSLETTER ==================== */
+.newsletter-section {
+    padding: 20px 0 60px 0;
+}
+
+.newsletter-box {
+    background-color: #e0e7ff;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.newsletter-icon {
+    background-color: #c7d2fe;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #4338ca;
+}
+
+.newsletter-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.newsletter-text h3 {
+    font-size: 1.1rem;
+    color: #1e1b4b;
+    margin-bottom: 4px;
+}
+
+.newsletter-text p {
+    font-size: 0.85rem;
+    color: #4338ca;
+}
+
+/* Formulário com Input e Botão */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    width: 240px;
+    font-size: 0.9rem;
+}
+
+.btn-newsletter {
+    background-color: #6366f1;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-newsletter:hover {
+    background-color: #4f46e5;
+}

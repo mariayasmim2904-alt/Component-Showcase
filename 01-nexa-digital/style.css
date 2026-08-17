@@ -1,0 +1,107 @@
+/* ESTILOS GERAIS (RESET E CONFIGURAÇÕES BÁSICAS)*/
+
+/* Remove margens e paddings padrão de todos os elementos para maior controle */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do elemento */
+}
+
+/* Configurações básicas de corpo e tipografia (usando uma fonte limpa e moderna) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte padrão do sistema, substitua se quiser */
+    color: #333333; /* Cor do texto padrão (Cinza escuro) */
+    background-color: #FFFFFF; /* Fundo principal Branco */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+}
+
+/* Container para centralizar o conteúdo e limitar a largura máxima */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20px; /* Espaçamento lateral para não grudar na borda em telas pequenas */
+}
+
+/* Estilo para links em geral */
+a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Herda a cor do elemento pai */
+    transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+/* Define o estilo padrão de listas */
+ul {
+    list-style: none; /* Remove os pontos/números */
+}
+
+/*COMPONENTES REUTILIZÁVEIS*/
+
+/* Botão Principal com a nova cor de destaque (Azul Marinho) */
+.btn-primary {
+    display: inline-block; /* Permite definir padding e largura */
+    background-color: #1A3C6D; /* Cor de fundo Azul Marinho Profissional */
+    color: #FFFFFF; /* Cor do texto Branca */
+    padding: 12px 28px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: 600; /* Texto em negrito leve */
+    cursor: pointer; /* Cursor de "mãozinha" no hover */
+    border: none; /* Sem borda */
+}
+
+/* Efeito de hover (quando passa o mouse) no botão */
+.btn-primary:hover {
+    background-color: #265192; /* Cor um pouco mais clara ao passar o mouse */
+}
+
+/*ESTILOS DO CABEÇALHO (HEADER)*/
+
+.main-header {
+    background-color: #e2ecfc;
+    padding: 20px 0;
+    border-bottom: 1px solid #EAEAEA; /* Linha divisória cinza muito sutil */
+}
+
+/* Organização em linha espaçando os elementos do topo */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Mantém logo na esquerda e menu na direita */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+}
+
+/* Bloco do Logo da Empresa */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Distância calibrada entre a esfera e o nome */
+    font-size: 1.35rem;
+    font-weight: 700; /* Destaque em negrito marcante */
+    color: #1A3C6D; /* Nome da marca em Azul Marinho */
+}
+
+/* Configuração de traço para o logo em formato SVG */
+.logo-icon {
+    width: 26px;
+    height: 26px;
+    stroke-width: 1.8px; /* Espessura de linha fina premium */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    color: #265192; /* Ícone da esfera destacado em Azul Médio */
+}
+
+/* Menu de Navegação Horizontal */
+.main-nav ul {
+    display: flex;
+    gap: 25px; /* Espaçamento entre os links */
+}
+
+.main-nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555555; /* Links em cinza médio */
+}
+
+/* Efeito visual ao passar o mouse sobre os links do menu */
+.main-nav a:hover {
+    color: #1A3C6D; /* Links mudam para Azul Marinho */
+}

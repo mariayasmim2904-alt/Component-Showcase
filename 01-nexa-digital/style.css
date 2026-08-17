@@ -105,3 +105,84 @@ ul {
 .main-nav a:hover {
     color: #1A3C6D; /* Links mudam para Azul Marinho */
 }
+
+/* ESTILOS DA SEÇÃO HERO (BOAS-VINDAS)*/
+
+.hero-section {
+    padding: 80px 0;
+    background-color: #FAFAFA; /* Fundo cinza claro para criar profundidade */
+}
+
+/* Layout dividido em duas colunas idênticas no desktop */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Coluna esquerda de conteúdo textual */
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+/* Estilo do título principal H1 */
+.hero-content h1 {
+    font-size: 3rem;
+    color: #111111; /* Cor sólida quase preta */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Estilo do parágrafo explicativo do Hero */
+.hero-content p {
+    font-size: 1.1rem;
+    color: #666666; /* Texto em grafite suave */
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* Coluna direita que abriga a arte e as decorações abstratas */
+.hero-image-wrapper {
+    flex: 1;
+    position: relative; /* Base de posicionamento para as formas absolutas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem principal do gráfico 3D */
+.hero-3d-image {
+    width: 80%;
+    height: auto;
+    z-index: 2; /* Fica acima da névoa de fundo */
+    border-radius: 20px;
+}
+
+/* Efeito de iluminação suave azul claro (Glow de fundo) */
+.abstract-shape {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #D6EFFF; /* Tom azul bebê iluminado */
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: blur(80px); /* Forte desfoque para criar o efeito de sombra iluminada */
+    z-index: 1;
+    left: 20%;
+    top: 10%;
+}
+
+/* Esfera sólida flutuante decorativa */
+.abstract-sphere {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #265192; /* Azul Médio */
+    border-radius: 50%;
+    z-index: 3; /* Exibida por cima de todos os elementos */
+    right: 15%;
+    bottom: 20%;
+}

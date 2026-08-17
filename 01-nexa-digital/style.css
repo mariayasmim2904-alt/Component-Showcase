@@ -252,3 +252,84 @@ ul {
     color: #666666;
     line-height: 1.6;
 }
+
+/* ESTILOS DO RODAPÉ (CALL TO ACTION FINAL) */
+
+.footer-cta-section {
+    background-color: #e2ecfc;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título de chamada no rodapé */
+.footer-cta-section h2 {
+    font-size: 1.8rem;
+    color: #1A3C6D; /* Fundo azulado acinzentado de tom neutro corporativo */
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Ajuste no botão de destaque final do rodapé */
+.btn-cta {
+    font-size: 1.1rem;
+    padding: 14px 32px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (ADAPTAÇÃO PARA OUTRAS TELAS)
+   ========================================================================== */
+
+/* Ajustes para Tablets e Laptops menores */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column-reverse; /* Coloca a imagem no topo e o texto abaixo no mobile */
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .abstract-shape {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Ajustes para Celulares e Telas Pequenas */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Empilha a logo e os links verticalmente */
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr; /* Quebra as duas colunas em uma linha única vertical */
+        gap: 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 25px;
+    }
+}

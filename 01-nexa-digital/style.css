@@ -186,3 +186,69 @@ ul {
     right: 15%;
     bottom: 20%;
 }
+
+/* ESTILOS DA SEÇÃO DE SERVIÇOS (GRID)*/
+
+.services-section {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+}
+
+/* Grid automatizado dividindo espaço em duas colunas quadradas */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* Estilização individual das caixas de serviços */
+.service-card {
+    background-color: #a9c4fb;
+    border: 1px solid #F0F0F0; /* Borda externa muito sutil */
+    border-radius: 12px;
+    padding: 35px;
+    transition: all 0.3s ease;
+}
+
+/* Feedback de animação ao passar o mouse por cima do card */
+.service-card:hover {
+    transform: translateY(-5px); /* Eleva o card sutilmente */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03); /* Aplica uma sombra leve */
+    border-color: #D6EFFF; /* Destaca as bordas no azul claro */
+}
+
+/* Pequeno quadrado minimalista que envolve o ícone */
+.icon-container {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #FAFAFA;
+}
+
+/* Controle milimétrico dos traços dos ícones do Lucide */
+.service-icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px; /* Linha limpa e bem definida */
+    color: #265192; /* Ícones em tom de Azul Médio profissional */
+}
+
+/* Título interno dos cards */
+.service-card h3 {
+    font-size: 1.3rem;
+    color: #111111;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Texto descritivo dos serviços */
+.service-card p {
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.6;
+}

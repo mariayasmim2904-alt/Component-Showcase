@@ -1,0 +1,122 @@
+/* ============================================ */
+/* RESET E VARIÁVEIS GLOBAIS                     */
+/* ============================================ */
+:root {
+    /* Cores fiéis à imagem */
+    --bg-light: #F9F6F0;
+    --text-dark: #1A2421;
+    --text-muted: #666666;
+    --primary-orange: #D9825B;
+    --primary-hover: #c4714b;
+    --dark-green: #141F1B;
+    --card-bg: #FFFFFF;
+    
+    /* Fontes */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Layout Container Global */
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Botões Reutilizáveis */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-dark {
+    background-color: var(--dark-green);
+    color: #FFFFFF;
+}
+
+.btn-dark:hover {
+    opacity: 0.9;
+}
+
+/* ============================================ */
+/* 1. ESTILOS DO HEADER                         */
+/* ============================================ */
+.header {
+    padding: 25px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    color: var(--primary-orange);
+}
+
+.nav-list {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary-orange);
+}

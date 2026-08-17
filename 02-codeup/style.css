@@ -102,3 +102,137 @@ body {
 .btn-primary:hover {
     background-color: var(--color-primary-dark);
 }
+
+/* ==================== SEÇÃO DE PLANOS ==================== */
+.pricing-section {
+    padding: 60px 0;
+}
+
+/* Título central da seção */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h1 {
+    font-size: 2.2rem;
+    color: var(--color-text-main);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+}
+
+/* Grid com os 3 cards */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    align-items: center;
+}
+
+/* Card Padrão */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius);
+    padding: 35px 25px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+/* Card Destaque (Plano Pro) */
+.card-featured {
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
+}
+
+/* Ícones acima de cada plano */
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 1.2rem;
+}
+
+.icon-basic { background-color: #e0f2fe; color: #0284c7; }
+.icon-pro { background-color: #dbeafe; color: #2563eb; }
+.icon-premium { background-color: #f3e8ff; color: #9333ea; }
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+/* Lista de benefícios/features */
+.features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.features li {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features li i {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+}
+
+/* Botões dos cards */
+.btn-outline {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-outline:hover {
+    background-color: #f1f5f9;
+}
+
+.btn-solid {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--color-primary);
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-solid:hover {
+    background-color: var(--color-primary-dark);
+}

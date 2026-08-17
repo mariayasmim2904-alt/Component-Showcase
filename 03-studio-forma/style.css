@@ -194,3 +194,41 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+/* ============================================ */
+/* 3. ESTILOS DA SEÇÃO ESTATÍSTICAS             */
+/* ============================================ */
+.stats {
+    background-color: var(--dark-green);
+    color: #FFFFFF;
+    padding: 45px 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}

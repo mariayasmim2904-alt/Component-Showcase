@@ -1,0 +1,104 @@
+/* ==================== RESET E VARIÁVEIS GLOBAIS ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color-primary: #3b82f6;      /* Azul principal */
+    --color-primary-dark: #2563eb; /* Azul escuro */
+    --color-bg-light: #f8fafc;     /* Fundo claro da página */
+    --color-text-main: #1e293b;    /* Texto principal */
+    --color-text-muted: #64748b;   /* Texto secundário/cinza */
+    --color-footer-bg: #0f172a;    /* Fundo escuro do rodapé */
+    --border-radius: 12px;
+}
+
+body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-main);
+}
+
+/* Container para centralizar e padronizar as larguras das seções */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 18px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo do Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: var(--color-primary);
+}
+
+/* Links do menu */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--color-text-main);
+}
+
+/* Botões do cabeçalho */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-text {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}

@@ -22,6 +22,11 @@
     box-sizing: border-box;
 }
 
+/* Adicione a rolagem suave aqui! */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--bg-light);

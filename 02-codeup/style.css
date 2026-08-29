@@ -7,21 +7,28 @@
 }
 
 :root {
-    --color-primary: #3b82f6;      /* Azul principal */
-    --color-primary-dark: #2563eb; /* Azul escuro */
-    --color-bg-light: #f8fafc;     /* Fundo claro da página */
-    --color-text-main: #1e293b;    /* Texto principal */
-    --color-text-muted: #64748b;   /* Texto secundário/cinza */
-    --color-footer-bg: #0f172a;    /* Fundo escuro do rodapé */
-    --border-radius: 12px;
+    /* Paleta de Cores em Fundo Escuro */
+    --color-bg-dark: #08080D;       /* Preto de fundo */
+    --color-purple-dark: #5B21B6;   /* Roxo escuro */
+    --color-purple: #8B5CF6;        /* Roxo vibrante */
+    --color-teal: #2DD4BF;          /* Verde-água (Teal) */
+    --color-cyan-light: #67E8F9;    /* Ciano claro */
+    
+    /* Variáveis de Apoio */
+    --color-card-bg: #0F0F17;
+    --color-card-hover: #161622;
+    --color-text-main: #ffffff;
+    --color-text-muted: #9ca3af;
+    --gradient-primary: linear-gradient(135deg, #7C3AED, #2DD4BF);
+    --border-radius: 16px;
 }
 
 body {
-    background-color: var(--color-bg-light);
+    background-color: var(--color-bg-dark);
     color: var(--color-text-main);
 }
 
-/* Container para centralizar e padronizar as larguras das seções */
+/* Container para centralizar e padronizar as larguras */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -30,9 +37,13 @@ body {
 
 /* ==================== HEADER ==================== */
 .header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
+    background-color: rgba(8, 8, 13, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(91, 33, 182, 0.3);
     padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header-container {
@@ -41,7 +52,6 @@ body {
     align-items: center;
 }
 
-/* Estilo do Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -53,10 +63,9 @@ body {
 }
 
 .logo-icon {
-    color: var(--color-primary);
+    color: var(--color-teal);
 }
 
-/* Links do menu */
 .nav-links {
     display: flex;
     gap: 25px;
@@ -71,10 +80,9 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color-text-main);
+    color: var(--color-cyan-light);
 }
 
-/* Botões do cabeçalho */
 .auth-buttons {
     display: flex;
     align-items: center;
@@ -83,24 +91,31 @@ body {
 
 .btn-text {
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--color-text-main);
     font-weight: 600;
     font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.btn-text:hover {
+    color: var(--color-purple);
 }
 
 .btn-primary {
     text-decoration: none;
-    background-color: var(--color-primary);
+    background: var(--gradient-primary);
     color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 6px;
+    padding: 8px 18px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 212, 191, 0.4);
 }
 
 /* ==================== SEÇÃO DE PLANOS ==================== */
@@ -108,14 +123,13 @@ body {
     padding: 60px 0;
 }
 
-/* Título central da seção */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
 }
 
 .section-title h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: var(--color-text-main);
     line-height: 1.3;
     margin-bottom: 12px;
@@ -126,28 +140,54 @@ body {
     font-size: 1rem;
 }
 
-/* Grid com os 3 cards */
+/* Grid com os cards */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    align-items: center;
+    align-items: stretch;
 }
 
-/* Card Padrão */
+/* Esconde o Input de Radio Nativo */
+.plan-radio {
+    display: none;
+}
+
+/* Badge escondida por padrão */
+.card .badge {
+    display: none;
+}
+
+/* Card transformado em Label Clicável */
 .card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: var(--color-card-bg);
+    border: 2px solid rgba(91, 33, 182, 0.3);
     border-radius: var(--border-radius);
     padding: 35px 25px;
     text-align: center;
-    transition: transform 0.2s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Card Destaque (Plano Pro) */
-.card-featured {
-    border: 2px solid var(--color-primary);
-    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(139, 92, 246, 0.6);
+    background-color: var(--color-card-hover);
+}
+
+/* Circuito visual do Radio Button */
+.radio-indicator {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-purple-dark);
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    position: relative;
+    transition: all 0.3s ease;
+    background: var(--color-bg-dark);
 }
 
 /* Ícones acima de cada plano */
@@ -162,19 +202,21 @@ body {
     font-size: 1.2rem;
 }
 
-.icon-basic { background-color: #e0f2fe; color: #0284c7; }
-.icon-pro { background-color: #dbeafe; color: #2563eb; }
-.icon-premium { background-color: #f3e8ff; color: #9333ea; }
+.icon-basic { background-color: rgba(139, 92, 246, 0.15); color: var(--color-purple); }
+.icon-pro { background-color: rgba(45, 212, 191, 0.15); color: var(--color-teal); }
+.icon-premium { background-color: rgba(103, 232, 249, 0.15); color: var(--color-cyan-light); }
 
 .card h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
+    color: var(--color-text-main);
 }
 
 .price {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 25px;
+    color: var(--color-text-main);
 }
 
 .price span {
@@ -183,11 +225,11 @@ body {
     font-weight: 400;
 }
 
-/* Lista de benefícios/features */
 .features {
     list-style: none;
     text-align: left;
     margin-bottom: 30px;
+    flex-grow: 1;
 }
 
 .features li {
@@ -200,41 +242,79 @@ body {
 }
 
 .features li i {
-    color: var(--color-primary);
+    color: var(--color-teal);
     font-size: 0.8rem;
 }
 
-/* Botões dos cards */
-.btn-outline {
+.btn-card {
     display: block;
     width: 100%;
     padding: 10px 0;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    color: var(--color-primary);
+    border: 1px solid var(--color-purple);
+    border-radius: 8px;
+    color: var(--color-text-main);
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
+    margin-top: auto;
 }
 
-.btn-outline:hover {
-    background-color: #f1f5f9;
+/* ==========================================================================
+   SELETORES CSS PARA O SELECTOR :checked (Efeito Dinâmico de Seleção)
+   ========================================================================== */
+
+/* Destaque com borda gradiente no Card selecionado */
+.plan-radio:checked + .card {
+    border: 2px solid transparent;
+    background-image: linear-gradient(var(--color-card-bg), var(--color-card-bg)), var(--gradient-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 10px 30px rgba(45, 212, 191, 0.2);
+    transform: translateY(-8px);
 }
 
-.btn-solid {
+/* Badge flutuante 'Selecionado' ativada */
+.plan-radio:checked + .card .badge {
     display: block;
-    width: 100%;
-    padding: 10px 0;
-    background-color: var(--color-primary);
-    border-radius: 6px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-primary);
     color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.btn-solid:hover {
-    background-color: var(--color-primary-dark);
+/* Marcador de Radio ativo */
+.plan-radio:checked + .card .radio-indicator {
+    border-color: var(--color-teal);
+    background: var(--gradient-primary);
+    box-shadow: 0 0 12px rgba(45, 212, 191, 0.5);
+}
+
+.plan-radio:checked + .card .radio-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+/* Botão preenchido com gradiente no card selecionado */
+.plan-radio:checked + .card .btn-card {
+    background: var(--gradient-primary);
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
 }
 
 /* ==================== SEÇÃO NEWSLETTER ==================== */
@@ -243,7 +323,8 @@ body {
 }
 
 .newsletter-box {
-    background-color: #e0e7ff;
+    background: linear-gradient(135deg, rgba(91, 33, 182, 0.25), rgba(15, 15, 23, 0.95));
+    border: 1px solid rgba(139, 92, 246, 0.3);
     border-radius: var(--border-radius);
     padding: 30px;
     display: flex;
@@ -253,7 +334,7 @@ body {
 }
 
 .newsletter-icon {
-    background-color: #c7d2fe;
+    background: rgba(103, 232, 249, 0.1);
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -261,7 +342,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: #4338ca;
+    color: var(--color-cyan-light);
 }
 
 .newsletter-text {
@@ -271,16 +352,15 @@ body {
 
 .newsletter-text h3 {
     font-size: 1.1rem;
-    color: #1e1b4b;
+    color: var(--color-text-main);
     margin-bottom: 4px;
 }
 
 .newsletter-text p {
     font-size: 0.85rem;
-    color: #4338ca;
+    color: var(--color-text-muted);
 }
 
-/* Formulário com Input e Botão */
 .newsletter-form {
     display: flex;
     gap: 10px;
@@ -289,32 +369,39 @@ body {
 
 .newsletter-form input {
     padding: 10px 15px;
-    border: 1px solid transparent;
+    background-color: var(--color-bg-dark);
+    border: 1px solid rgba(139, 92, 246, 0.4);
     border-radius: 6px;
     outline: none;
     width: 240px;
     font-size: 0.9rem;
+    color: var(--color-text-main);
+}
+
+.newsletter-form input:focus {
+    border-color: var(--color-teal);
 }
 
 .btn-newsletter {
-    background-color: #6366f1;
-    color: #ffffff;
+    background-color: var(--color-teal);
+    color: var(--color-bg-dark);
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: opacity 0.2s;
 }
 
 .btn-newsletter:hover {
-    background-color: #4f46e5;
+    opacity: 0.9;
 }
 
 /* ==================== RODAPÉ ==================== */
 .footer {
-    background-color: var(--color-footer-bg);
-    color: #94a3b8;
+    background-color: var(--color-bg-dark);
+    border-top: 1px solid rgba(91, 33, 182, 0.3);
+    color: var(--color-text-muted);
     padding: 60px 0 30px 0;
 }
 
@@ -326,7 +413,7 @@ body {
 }
 
 .footer-logo {
-    color: #ffffff;
+    color: var(--color-text-main);
     margin-bottom: 15px;
 }
 
@@ -337,7 +424,6 @@ body {
     line-height: 1.5;
 }
 
-/* Ícones sociais arredondados */
 .social-links {
     display: flex;
     gap: 10px;
@@ -346,24 +432,24 @@ body {
 .social-links a {
     width: 35px;
     height: 35px;
-    background-color: #1e293b;
-    color: #ffffff;
+    background-color: var(--color-card-bg);
+    color: var(--color-text-muted);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     font-size: 0.85rem;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
 }
 
 .social-links a:hover {
-    background-color: var(--color-primary);
+    background: var(--gradient-primary);
+    color: #ffffff;
 }
 
-/* Colunas de links */
 .footer-column h4 {
-    color: #ffffff;
+    color: var(--color-text-main);
     font-size: 1rem;
     margin-bottom: 15px;
 }
@@ -377,19 +463,18 @@ body {
 }
 
 .footer-column ul li a {
-    color: #94a3b8;
+    color: var(--color-text-muted);
     text-decoration: none;
     font-size: 0.88rem;
     transition: color 0.2s;
 }
 
 .footer-column ul li a:hover {
-    color: #ffffff;
+    color: var(--color-teal);
 }
 
-/* Linha divisória e Copyright */
 .footer-bottom {
-    border-top: 1px solid #1e293b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 25px;
     text-align: center;
     font-size: 0.85rem;

@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Form - Agência de Design</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fontes do Google (Playfair Display para títulos elegantes e Plus Jakarta Sans para corpo) -->
+    <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- 1. HEADER / NAVEGAÇÃO  -->
+    <!-- 1. HEADER / NAVEGAÇÃO -->
 
     <header class="header">
         <div class="container header-container">
-          <a href="#" class="logo">
+            <a href="#" class="logo">
                 <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="9" cy="15" r="6" fill="currentColor" opacity="0.8"/>
                     <rect x="10" y="3" width="10" height="10" rx="2" transform="rotate(15 10 3)" fill="currentColor"/>
@@ -26,18 +26,17 @@
             <nav class="navbar">
                 <ul class="nav-list">
                     <li><a href="#" class="nav-link">Home</a></li>
-                    <li><a href="#" class="nav-link">Projetos</a></li>
-                    <li><a href="#" class="nav-link">Sobre</a></li>
-                    <li><a href="#" class="nav-link">Serviços</a></li>
-                    <li><a href="#" class="nav-link">Blog</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-dark">Contato</a>
+            <a href="#contato" class="btn btn-dark">Orçamento</a>
         </div>
     </header>
 
-        <!-- 2. SEÇÃO HERO (Título, Descrição e Imagem)  -->
-         
+    <main>
+        <!-- 2. SEÇÃO HERO -->
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
@@ -45,14 +44,11 @@
                     <p class="hero-description">
                         Design estratégico, identidade visual e desenvolvimento para marcas que querem se destacar.
                     </p>
-                    <a href="#" class="btn btn-primary">Ver projetos</a>
+                    <a href="#projetos" class="btn btn-primary">Ver projetos</a>
                 </div>
                 <div class="hero-media">
-                    <!-- Elemento decorativo pontilhado -->
                     <div class="dots-pattern"></div>
-                    <!-- Forma decorativa terracota ao fundo -->
                     <div class="hero-shape"></div>
-                    <!-- Imagem principal do Hero -->
                     <div class="hero-image-wrapper">
                         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" alt="Vaso decorativo com folha de monstera" class="hero-img">
                     </div>
@@ -60,33 +56,47 @@
             </div>
         </section>
 
-        <!-- 3. NÚMEROS / ESTATÍSTICAS  -->
-        
-        <section class="stats">
+        <!-- 3. NÚMEROS / ESTATÍSTICAS & SOBRE -->
+        <section id="sobre" class="stats">
             <div class="container stats-container">
                 <div class="stat-item">
-                    <span class="stat-icon">💼</span>
+                    <!-- Ícone Vetorial de Projetos (Maleta) -->
+                    <span class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </span>
                     <div class="stat-info">
                         <h3 class="stat-number">120+</h3>
                         <p class="stat-label">Projetos concluídos</p>
                     </div>
                 </div>
+
                 <div class="stat-item">
-                    <span class="stat-icon">🤝</span>
+                    <!-- Ícone Vetorial de Clientes (Usuários) -->
+                    <span class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </span>
                     <div class="stat-info">
                         <h3 class="stat-number">80+</h3>
                         <p class="stat-label">Clientes satisfeitos</p>
                     </div>
                 </div>
+
                 <div class="stat-item">
-                    <span class="stat-icon">🏆</span>
+                    <!-- Ícone Vetorial de Prêmios (Troféu Minimalista) -->
+                    <span class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+                    </span>
                     <div class="stat-info">
                         <h3 class="stat-number">15+</h3>
                         <p class="stat-label">Prêmios recebidos</p>
                     </div>
                 </div>
+
                 <div class="stat-item">
-                    <span class="stat-icon">⏱️</span>
+                    <!-- Ícone Vetorial de Experiência (Relógio) -->
+                    <span class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </span>
                     <div class="stat-info">
                         <h3 class="stat-number">5+</h3>
                         <p class="stat-label">Anos de experiência</p>
@@ -96,8 +106,7 @@
         </section>
 
         <!-- 4. GALERIA DE PROJETOS EM DESTAQUE -->
-
-        <section class="projects">
+        <section id="projetos" class="projects">
             <div class="container">
                 <h2 class="section-title">Nossos projetos em destaque</h2>
                 
@@ -150,35 +159,42 @@
         </section>     
 
         <!-- 5. CHAMADA FINAL (CTA Banner) -->
-    
-        <section class="cta">
+        <section id="contato" class="cta">
             <div class="container cta-container">
                 <h2 class="cta-title">Vamos criar algo incrível juntos?</h2>
-                <a href="#" class="btn btn-dark">Fale com a gente</a>
+                <a href="mailto:contato@form.studio" class="btn btn-dark">Fale com a gente</a>
             </div>
         </section>
     </main>
 
     <!-- 6. RODAPÉ (Footer) -->
-
     <footer class="footer">
         <div class="container footer-container">
             <!-- Coluna 1: Marca & Redes -->
             <div class="footer-col brand-col">
                 <a href="#" class="logo">
-                <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="9" cy="15" r="6" fill="currentColor" opacity="0.8"/>
-                    <rect x="10" y="3" width="10" height="10" rx="2" transform="rotate(15 10 3)" fill="currentColor"/>
-                </svg>
-                Studio Form
-            </a> 
+                    <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="15" r="6" fill="currentColor" opacity="0.8"/>
+                        <rect x="10" y="3" width="10" height="10" rx="2" transform="rotate(15 10 3)" fill="currentColor"/>
+                    </svg>
+                    Studio Form
+                </a> 
                 <p class="footer-text">
                     Transformamos ideias em soluções visuais que geram valor e impacto.
                 </p>
                 <div class="social-links">
-                    <a href="#" aria-label="Facebook">f</a>
-                    <a href="#" aria-label="Instagram">📷</a>
-                    <a href="#" aria-label="Twitter">🕊️</a>
+                    <!-- Instagram SVG -->
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <!-- Behance SVG -->
+                    <a href="#" aria-label="Behance">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h6a3 3 0 0 1 0 6H3V8z"/><path d="M3 14h7a3 3 0 0 1 0 6H3v-6z"/><path d="M14 13h7a3.5 3.5 0 0 0-7 0z"/><line x1="15" y1="9" x2="20" y2="9"/></svg>
+                    </a>
+                    <!-- LinkedIn SVG -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
                 </div>
             </div>
 
@@ -187,10 +203,9 @@
                 <h4 class="footer-title">Navegação</h4>
                 <ul class="footer-links">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
 
@@ -198,7 +213,7 @@
             <div class="footer-col">
                 <h4 class="footer-title">Contato</h4>
                 <ul class="footer-contact">
-                    <li><a href="mailto:contato@aura.studio">contato@form.studio</a></li>
+                    <li><a href="mailto:contato@form.studio">contato@form.studio</a></li>
                     <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
                     <li>São Paulo, SP</li>
                 </ul>

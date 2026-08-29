@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeUp - Planos e Preços</title>
-    <!-- Importação de ícones do FontAwesome para os ícones das listas, redes sociais e newsletter -->
+    <title>CodeUp</title>
+    <!-- Importação de ícones do FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,15 +16,15 @@
             <!-- Logo da marca -->
             <a href="#" class="logo">
                 <i class="fa-solid fa-cube logo-icon"></i>
-                <span>SkillHub</span>
+                <span>CodeUp</span>
             </a>
 
             <!-- Menu de links de navegação principal -->
             <nav class="nav-links">
-                <a href="#">Cursos</a>
-                <a href="#">Planos</a>
-                <a href="#">Sobre</a>
-                <a href="#">Contato</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#planos">Planos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
             </nav>
 
             <!-- Botões de ação do usuário (Login/Cadastro) -->
@@ -35,8 +35,9 @@
         </div>
     </header>
 
-    <!-- == SEÇÃO DE PLANOS == -->
-        <section class="pricing-section">
+    <main>
+        <!-- == SEÇÃO DE PLANOS == -->
+        <section id="planos" class="pricing-section">
             <div class="container">
                 <!-- Título e introdução da seção -->
                 <div class="section-title">
@@ -44,11 +45,14 @@
                     <p>Aprenda no seu ritmo e tenha acesso a conteúdos exclusivos, projetos e certificações.</p>
                 </div>
 
-                <!-- Grid contendo os cards dos 3 planos -->
+                <!-- Grid contendo os cards dos 3 planos com sistema de seleção por radio (CSS Puro) -->
                 <div class="pricing-grid">
                     
-                    <!-- Card 1: Plano Básico -->
-                    <div class="card">
+                    <!-- CARD 1: BÁSICO -->
+                    <input type="radio" name="plan_select" id="plan-basic" class="plan-radio">
+                    <label for="plan-basic" class="card">
+                        <span class="badge">Selecionado</span>
+                        <div class="radio-indicator"></div>
                         <div class="card-icon icon-basic">
                             <i class="fa-regular fa-paper-plane"></i>
                         </div>
@@ -59,11 +63,14 @@
                             <li><i class="fa-solid fa-check"></i> Exercícios práticos</li>
                             <li><i class="fa-solid fa-check"></i> Certificado de conclusão</li>
                         </ul>
-                        <a href="#" class="btn-outline">Assinar plano</a>
-                    </div>
+                        <span class="btn-card">Assinar plano</span>
+                    </label>
 
-                    <!-- Card 2: Plano Pro (Destaque) -->
-                    <div class="card card-featured">
+                    <!-- CARD 2: PRO (Inicia marcado como selecionado padrão) -->
+                    <input type="radio" name="plan_select" id="plan-pro" class="plan-radio" checked>
+                    <label for="plan-pro" class="card">
+                        <span class="badge">Selecionado</span>
+                        <div class="radio-indicator"></div>
                         <div class="card-icon icon-pro">
                             <i class="fa-solid fa-star"></i>
                         </div>
@@ -75,11 +82,14 @@
                             <li><i class="fa-solid fa-check"></i> Certificados</li>
                             <li><i class="fa-solid fa-check"></i> Suporte por e-mail</li>
                         </ul>
-                        <a href="#" class="btn-solid">Assinar plano</a>
-                    </div>
+                        <span class="btn-card">Assinar plano</span>
+                    </label>
 
-                    <!-- Card 3: Plano Premium -->
-                    <div class="card">
+                    <!-- CARD 3: PREMIUM -->
+                    <input type="radio" name="plan_select" id="plan-premium" class="plan-radio">
+                    <label for="plan-premium" class="card">
+                        <span class="badge">Selecionado</span>
+                        <div class="radio-indicator"></div>
                         <div class="card-icon icon-premium">
                             <i class="fa-solid fa-crown"></i>
                         </div>
@@ -91,8 +101,8 @@
                             <li><i class="fa-solid fa-check"></i> Comunidade exclusiva</li>
                             <li><i class="fa-solid fa-check"></i> Suporte prioritário</li>
                         </ul>
-                        <a href="#" class="btn-outline">Assinar plano</a>
-                    </div>
+                        <span class="btn-card">Assinar plano</span>
+                    </label>
 
                 </div>
             </div>
@@ -127,7 +137,7 @@
     <footer class="footer">
         <div class="container">
             <!-- Grid das colunas do rodapé -->
-            <div class="footer-grid">
+            <div id="contato" class="footer-grid">
                 
                 <!-- Coluna 1: Marca e Redes Sociais -->
                 <div class="footer-brand">
